@@ -822,10 +822,6 @@ balanced-match@^0.4.1, balanced-match@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
 
-balloon-css@^0.5.0:
-  version "0.5.0"
-  resolved "http://registry.npm.taobao.org/balloon-css/download/balloon-css-0.5.0.tgz#6a3c065efab9ea5f509a95d4315df00aae114fa3"
-
 base64-js@^1.0.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.0.tgz#a39992d723584811982be5e290bb6a53d86700f1"
@@ -1627,12 +1623,6 @@ dot-prop@^4.1.0:
   resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.1.1.tgz#a8493f0b7b5eeec82525b5c7587fa7de7ca859c1"
   dependencies:
     is-obj "^1.0.0"
-
-dplayer@^1.5.0:
-  version "1.16.0"
-  resolved "http://registry.npm.taobao.org/dplayer/download/dplayer-1.16.0.tgz#a3983f66f7dc938078b249d565c718bea9cbee45"
-  dependencies:
-    balloon-css "^0.5.0"
 
 duplexer3@^0.1.4:
   version "0.1.4"
