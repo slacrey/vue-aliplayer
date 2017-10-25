@@ -1,4 +1,4 @@
-# Vue-DPlayer
+# Vue-AliPlayer
 
 > A Vue 2.x video player component based on [vue-aliplayer](https://github.com/slacrey/vue-aliplayer).
 
