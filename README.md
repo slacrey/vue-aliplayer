@@ -38,7 +38,7 @@ export default {
 | useFlashPrism | Boolean | false | 指定使用Flash播放器 |
 | playsinline | Boolean | false | H5是否内置播放，有的Android浏览器不起作用 |
 | format | String | mp4 | 指定播放地址格式，只有使用vid+plauth播放方式时支持可选值为'mp4'和'm3u8',默认为'mp4' |
-| x5-type | String | 'auto' | 声明启用同层H5播放器，启用时设置的值为'h5'具体参考[同层播放](https://player.alicdn.com/aliplayer/docs/blogs/how-to-handle-h5-same-layer.html) |
+| x5_type | String | 'auto' | 声明启用同层H5播放器，启用时设置的值为'h5'具体参考[同层播放](https://player.alicdn.com/aliplayer/docs/blogs/how-to-handle-h5-same-layer.html) |
 | x5_fullscreen | Boolean | false |声明视频播放时是否进入到TBS的全屏模式，默认为false具体参考[同层播放](https://player.alicdn.com/aliplayer/docs/blogs/how-to-handle-h5-same-layer.html) |
 | x5_video_position | String | center | 声明视频播在界面上的位置，默认为"center" 可选值为：'top'，'center' 具体参考[同层播放](https://player.alicdn.com/aliplayer/docs/blogs/how-to-handle-h5-same-layer.html) |
 | x5_orientation| String |  | 声明TBS播放器支持的方向，可选值：landscape:横屏） portraint:竖屏 landscape |
