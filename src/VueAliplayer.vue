@@ -67,21 +67,28 @@ export default {
       type: String,
       default: "m3u8"
     },
-    x5VideoPosition: {
+    x5_video_position: {
       type: String,
       default: "top"
     },
-    x5Type: {
+    x5_type: {
       type: String,
       default: "h5"
     },
-    x5Fullscreen: {
+    x5_fullscreen: {
       type: Boolean,
       default: false
     },
-    x5Orientation: {
+    x5_orientation: {
       type: Number,
       default: 2
+    },
+    autoPlayDelay: {
+      type: Number,
+      default: 0
+    },
+    autoPlayDelayDisplayText: {
+      type: String
     }
   },
   data() {
@@ -157,10 +164,12 @@ export default {
             playauth: _this.playauth,
             source: _this.source,
             cover: _this.cover,
-            x5_video_position: _this.x5VideoPosition,
-            x5_type: _this.x5Type,
-            x5_fullscreen: _this.x5Fullscreen,
-            x5_orientation: _this.x5Orientation
+            x5_video_position: _this.x5_video_position,
+            x5_type: _this.x5_type,
+            x5_fullscreen: _this.x5_fullscreen,
+            x5_orientation: _this.x5_orientation,
+            autoPlayDelay: _this.autoPlayDelay,
+            autoPlayDelayDisplayText: _this.autoPlayDelayDisplayText
           });
 
           // 绑定事件，当 AliPlayer 初始化完成后，将编辑器实例通过自定义的 ready 事件交出去
