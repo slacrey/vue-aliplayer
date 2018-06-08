@@ -13,7 +13,7 @@ export default {
     aliplayerSdkPath: {
       // Aliplayer 代码的路径
       type: String,
-      default: "//g.alicdn.com/de/prismplayer/2.1.0/aliplayer-min.js"
+      default: "//g.alicdn.com/de/prismplayer/2.6.0/aliplayer-min.js"
     },
     autoplay: {
       type: Boolean,
@@ -95,6 +95,7 @@ export default {
     return {
       playerId: "aliplayer_" + Math.random() * 100000000000000000,
       scriptTagStatus: 0,
+      isReload: false,
       instance: null
     };
   },
@@ -145,7 +146,13 @@ export default {
     initAliplayer() {
       const _this = this;
       // scriptTagStatus 为 2 的时候，说明两个必需引入的 js 文件都已经被引入，且加载完成
-      if (_this.scriptTagStatus === 2 && _this.instance === null) {
+      if (
+        _this.scriptTagStatus === 2 &&
+        (_this.instance === null || _this.reloadPlayer)
+      ) {
+        _this.instance && _this.instance.dispose();
+        document.querySelector("#" + _this.playerId).innerHTML = "";
+
         // Vue 异步执行 DOM 更新，这样一来代码执行到这里的时候可能 template 里面的 script 标签还没真正创建
         // 所以，我们只能在 nextTick 里面初始化 Aliplayer
         _this.$nextTick(() => {
@@ -217,7 +224,7 @@ export default {
     play: function() {
       this.instance.play();
     },
-    /** 
+    /**
      * 暂停视频
      */
     pause: function() {
@@ -286,11 +293,16 @@ export default {
     },
     /**
      * 目前只支持HTML5界面上的重载功能,暂不支持直播rtmp流切换m3u8）之间切换,暂不支持直播rtmp流切换
-     *@argument vid 视频id 
+     *@argument vid 视频id
      *@argument playauth 播放凭证
      */
     reloaduserPlayInfoAndVidRequestMts: function(vid, playauth) {
       this.instance.reloaduserPlayInfoAndVidRequestMts(vid, playauth);
+    },
+    reloadPlayer: function() {
+      this.isReload = true;
+      this.initAliplayer();
+      this.isReload = false;
     }
   }
 };

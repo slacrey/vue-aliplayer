@@ -3,11 +3,12 @@
     <h1>Vue-AliPlayer</h1>
     <h2>A Vue 2.x component of <a href="https://github.com/slacrey/vue-aliplayer" target="_blank">Aliplayer</a></h2>
     <github-badge slug="slacrey/vue-aliplayer" />
-    <ali-player @play="played" :source="aplayer.source" :vid="aplayer.vid" :playauth="aplayer.playauth" ref="player"></ali-player>
+    <ali-player @play="played" :source="aplayer.source" :autoplay="true" :vid="aplayer.vid" :playauth="aplayer.playauth" ref="player"></ali-player>
     <div style="margin-top:20px;">
     <button @click="play">播放</button>
     <button @click="pause">暂停</button>
     <button @click="replay">重播</button>
+    <button @click="convert">切换</button>
     </div>
   </div>
 </template>
@@ -43,6 +44,11 @@ export default {
     replay() {
       const player = this.$refs.player.instance;
       player && player.replay();
+    },
+    convert() {
+      this.aplayer.source = 'http://static.smartisanos.cn/common/video/t1-ui.mp4';
+      const player = this.$refs.player;
+      player && player.reloadPlayer();
     }
   },
   components: {
