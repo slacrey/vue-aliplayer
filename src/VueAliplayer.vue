@@ -93,7 +93,7 @@ export default {
   },
   data() {
     return {
-      playerId: "aliplayer_" + Math.random() * 100000000000000000,
+      playerId: "aliplayer_" + Math.random().toString(36).substr(2),
       scriptTagStatus: 0,
       isReload: false,
       instance: null
@@ -151,6 +151,7 @@ export default {
         (_this.instance === null || _this.reloadPlayer)
       ) {
         _this.instance && _this.instance.dispose();
+        
         document.querySelector("#" + _this.playerId).innerHTML = "";
 
         // Vue 异步执行 DOM 更新，这样一来代码执行到这里的时候可能 template 里面的 script 标签还没真正创建
