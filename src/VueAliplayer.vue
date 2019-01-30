@@ -67,6 +67,12 @@ export default {
       type: String,
       default: "m3u8"
     },
+    skinLayout: {
+      type: Array,
+      default: function () {
+        return []
+      }
+    },
     x5_video_position: {
       type: String,
       default: "top"
@@ -172,6 +178,7 @@ export default {
             playauth: _this.playauth,
             source: _this.source,
             cover: _this.cover,
+            skinLayout: _this.skinLayout,
             x5_video_position: _this.x5_video_position,
             x5_type: _this.x5_type,
             x5_fullscreen: _this.x5_fullscreen,
