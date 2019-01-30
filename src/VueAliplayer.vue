@@ -317,5 +317,5 @@ export default {
 </script>
 
 <style>
-@import url(//g.alicdn.com/de/prismplayer/2.1.0/skins/default/aliplayer-min.css);
+@import url(//g.alicdn.com/de/prismplayer/2.5.0/skins/default/aliplayer-min.css);
 </style>
