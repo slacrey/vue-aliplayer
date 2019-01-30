@@ -99,6 +99,7 @@ Example:
     <button @click="play">播放</button>
     <button @click="pause">暂停</button>
     <button @click="replay">重播</button>
+    <button @click="reload">重载</button>
 
 export default {
     methods: {
@@ -113,6 +114,11 @@ export default {
       replay: function() {
         const player = this.$refs.player.instance
         player && player.replay()
+      },
+      reload: function() {
+        // 修改source地址后
+        const player = this.$refs.player
+        player && player.reloadPlayer()
       }
     }
 ```
