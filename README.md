@@ -24,7 +24,7 @@ export default {
 
 | 名称    | 类型 | 默认值 | 说明 |
 | ---------- | ---- | ------- | ----------- |
-| aliplayerSdkPath | String | //g.alicdn.com/de/prismplayer/2.5.0/aliplayer-min.js | 阿里播放器引用地址 |
+| aliplayerSdkPath | String | //g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js | 阿里播放器引用地址 |
 | playStyle | String |  | 播放器自定义样式style |
 | source | String |  | 视频播放地址url：1、单独url；2、默认状态，表示使用“vi+playauth3、source播放方式优先级最高 |
 | vid | String |  | 媒体转码服务的媒体Id |
