@@ -13,7 +13,7 @@ export default {
     aliplayerSdkPath: {
       // Aliplayer 代码的路径
       type: String,
-      default: "//g.alicdn.com/de/prismplayer/2.6.0/aliplayer-min.js"
+      default: "//g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"
     },
     autoplay: {
       type: Boolean,
@@ -225,27 +225,27 @@ export default {
           });
           
           _this.instance.on("timeupdate", () => {
-            _this2.$emit("timeupdate", _this.instance);
+            _this.$emit("timeupdate", _this.instance);
           });
 
           _this.instance.on("requestFullScreen", () => {
-            _this2.$emit("requestFullScreen", _this.instance);
+            _this.$emit("requestFullScreen", _this.instance);
           });
 
           _this.instance.on("cancelFullScreen", () => {
-            _this2.$emit("cancelFullScreen", _this.instance);
+            _this.$emit("cancelFullScreen", _this.instance);
           });
 
           _this.instance.on("error", () => {
-            _this2.$emit("error", _this.instance);
+            _this.$emit("error", _this.instance);
           });
 
           _this.instance.on("startSeek", () => {
-            _this2.$emit("startSeek", _this.instance);
+            _this.$emit("startSeek", _this.instance);
           });
 
           _this.instance.on("completeSeek", () => {
-            _this2.$emit("completeSeek", _this.instance);
+            _this.$emit("completeSeek", _this.instance);
           });
         });
       }
@@ -341,5 +341,5 @@ export default {
 </script>
 
 <style>
-@import url(//g.alicdn.com/de/prismplayer/2.5.0/skins/default/aliplayer-min.css);
+@import url(//g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css);
 </style>
