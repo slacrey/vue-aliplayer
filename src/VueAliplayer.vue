@@ -225,27 +225,27 @@ export default {
           });
           
           _this.instance.on("timeupdate", () => {
-            _this2.$emit("timeupdate", _this.instance);
+            this.$emit("timeupdate", _this.instance);
           });
 
           _this.instance.on("requestFullScreen", () => {
-            _this2.$emit("requestFullScreen", _this.instance);
+            this.$emit("requestFullScreen", _this.instance);
           });
 
           _this.instance.on("cancelFullScreen", () => {
-            _this2.$emit("cancelFullScreen", _this.instance);
+            this.$emit("cancelFullScreen", _this.instance);
           });
 
           _this.instance.on("error", () => {
-            _this2.$emit("error", _this.instance);
+            this.$emit("error", _this.instance);
           });
 
           _this.instance.on("startSeek", () => {
-            _this2.$emit("startSeek", _this.instance);
+            this.$emit("startSeek", _this.instance);
           });
 
           _this.instance.on("completeSeek", () => {
-            _this2.$emit("completeSeek", _this.instance);
+            this.$emit("completeSeek", _this.instance);
           });
         });
       }
