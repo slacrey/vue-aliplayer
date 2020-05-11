@@ -1,6 +1,6 @@
 {
   "name": "vue-aliplayer",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A Vue 2.x video player component based on AliPlayer",
   "main": "dist/vue-aliplayer.js",
   "files": [
