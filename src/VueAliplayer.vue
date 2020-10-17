@@ -94,7 +94,28 @@
       skinLayout: {
         type: Array,
         default: function () {
-          return []
+          return [
+            { name: "bigPlayButton", align: "blabs", x: 30, y: 80 },
+            {
+              name: "H5Loading", align: "cc"
+            },
+            { name: "errorDisplay", align: "tlabs", x: 0, y: 0 },
+            { name: "infoDisplay" },
+            { name: "tooltip", align: "blabs", x: 0, y: 56 },
+            { name: "thumbnail" },
+            {
+              name: "controlBar", align: "blabs", x: 0, y: 0,
+              children: [
+                { name: "progress", align: "blabs", x: 0, y: 44 },
+                { name: "playButton", align: "tl", x: 15, y: 12 },
+                { name: "timeDisplay", align: "tl", x: 10, y: 7 },
+                { name: "fullScreenButton", align: "tr", x: 10, y: 12 },
+                { name: "subtitle", align: "tr", x: 15, y: 12 },
+                { name: "setting", align: "tr", x: 15, y: 12 },
+                { name: "volume", align: "tr", x: 5, y: 10 }
+              ]
+            }
+          ]
         }
       },
       //默认为‘hover’。可选的值为：‘click’、‘hover’、‘always’。
@@ -392,7 +413,7 @@
       aliplayerSdkPath: {
         // Aliplayer 代码的路径
         type: String,
-        default: "//g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"
+        default: "//g.alicdn.com/de/prismplayer/2.9.0/aliplayer-min.js"
       },
 
 
@@ -537,16 +558,16 @@
               this.$emit("ended", _this.instance);
             });
 
-            _this.instance.on("liveStreamStop", () => {
-              this.$emit("liveStreamStop", _this.instance);
+            _this.instance.on("livestreamstop", () => {
+              this.$emit("livestreamstop", _this.instance);
             });
 
-            _this.instance.on("m3u8Retry", () => {
-              this.$emit("m3u8Retry", _this.instance);
+            _this.instance.on("m3u8retry", () => {
+              this.$emit("m3u8retry", _this.instance);
             });
 
-            _this.instance.on("hideBar", () => {
-              this.$emit("hideBar", _this.instance);
+            _this.instance.on("hidebar", () => {
+              this.$emit("hidebar", _this.instance);
             });
 
             _this.instance.on("waiting", () => {
@@ -561,24 +582,24 @@
               this.$emit("timeupdate", _this.instance);
             });
 
-            _this.instance.on("requestFullScreen", () => {
-              this.$emit("requestFullScreen", _this.instance);
+            _this.instance.on("requestfullscreen", () => {
+              this.$emit("requestfullscreen", _this.instance);
             });
 
-            _this.instance.on("cancelFullScreen", () => {
-              this.$emit("cancelFullScreen", _this.instance);
+            _this.instance.on("cancelfullscreen", () => {
+              this.$emit("cancelfullscreen", _this.instance);
             });
 
             _this.instance.on("error", () => {
               this.$emit("error", _this.instance);
             });
 
-            _this.instance.on("startSeek", () => {
-              this.$emit("startSeek", _this.instance);
+            _this.instance.on("startseek", () => {
+              this.$emit("startseek", _this.instance);
             });
 
-            _this.instance.on("completeSeek", () => {
-              this.$emit("completeSeek", _this.instance);
+            _this.instance.on("completeseek", () => {
+              this.$emit("completeseek", _this.instance);
             });
           });
         }
@@ -713,5 +734,5 @@
 </script>
 
 <style>
-  @import url(//g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css);
+  @import url(//g.alicdn.com/de/prismplayer/2.9.0/skins/default/aliplayer-min.css);
 </style>
